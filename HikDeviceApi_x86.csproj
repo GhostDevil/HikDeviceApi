@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C14D2DD8-66D9-427B-8237-733BA2B23C6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HikDeviceApi</RootNamespace>
+    <AssemblyName>HikDeviceApi_x86</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\HikDeviceApi_x86.xml</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>bin\Debug\HikDeviceApi_x86.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Decoder\HikDecoderEnum.cs" />
+    <Compile Include="Decoder\HikDecoderManager.cs" />
+    <Compile Include="Door\HikDoorDelegate.cs" />
+    <Compile Include="Door\HikDoorEnum.cs" />
+    <Compile Include="Door\HikDoorManager.cs" />
+    <Compile Include="Door\HikDoorOperate.cs" />
+    <Compile Include="Decoder\HikDecoderApi.cs" />
+    <Compile Include="Decoder\HikDecoderOperate.cs" />
+    <Compile Include="Door\HikDoorApi.cs" />
+    <Compile Include="Door\HikDoorStruct.cs" />
+    <Compile Include="Decoder\HikDecoderStruct.cs" />
+    <Compile Include="Decoder\HikDecoderDelegate.cs" />
+    <Compile Include="HikApi.cs" />
+    <Compile Include="HikConst.cs" />
+    <Compile Include="TVWall\HikTVWallApi.cs" />
+    <Compile Include="TVWall\HikTVWallEnum.cs" />
+    <Compile Include="TVWall\HikTVWallManager.cs" />
+    <Compile Include="TVWall\HikTVWallOperate.cs" />
+    <Compile Include="TVWall\HikTVWallStruct.cs" />
+    <Compile Include="VideoRecorder\HikVideoApi.cs" />
+    <Compile Include="VideoRecorder\HikVideoDelegate.cs" />
+    <Compile Include="VideoRecorder\HikVideoEnum.cs" />
+    <Compile Include="VideoRecorder\HikVideoOperate.cs" />
+    <Compile Include="VideoRecorder\HikVideoStruct.cs" />
+    <Compile Include="IVMS\IVMSAPI.cs" />
+    <Compile Include="IVMS\IVMSDelegate.cs" />
+    <Compile Include="IVMS\IVMSEnum.cs" />
+    <Compile Include="IVMS\IVMSStruct.cs" />
+    <Compile Include="PTZ\HikPTZApi.cs" />
+    <Compile Include="PTZ\HikPTZDelegate.cs" />
+    <Compile Include="PTZ\HikPTZEnum.cs" />
+    <Compile Include="PTZ\HikPTZOperate.cs" />
+    <Compile Include="PTZ\HikPTZStruct.cs" />
+    <Compile Include="Screen\HikScreenDelegate.cs" />
+    <Compile Include="Screen\HikScreenEnum.cs" />
+    <Compile Include="Screen\HikScreenOperate.cs" />
+    <Compile Include="Screen\HikScreenStruct.cs" />
+    <Compile Include="HikDelegate.cs" />
+    <Compile Include="HikOperate.cs" />
+    <Compile Include="HikStruct.cs" />
+    <Compile Include="HikHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HikEnum.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SuperLibrary\SuperUtilities.csproj">
+      <Project>{e97e6b78-06f6-4522-a21a-3130cc5f37f9}</Project>
+      <Name>SuperUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
